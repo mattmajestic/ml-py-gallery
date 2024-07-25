@@ -1,0 +1,6 @@
+pokemontcgsdk
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
