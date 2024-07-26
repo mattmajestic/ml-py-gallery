@@ -1,0 +1,28 @@
+name: data-science  
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.9
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - jupyter
+  - numpy
+  - scipy
+  - statsmodels
+  - plotly
+  - nltk
+  - gensim
+  - beautifulsoup4
+  - lxml
+  - openpyxl
+  - xlrd
+  - pyodbc
+  - pymupdf
+  - pillow
+  - opencv-python
+  - pokemontcgsdk

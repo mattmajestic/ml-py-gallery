@@ -1,0 +1,11 @@
+services:
+  pokemon-classification:
+    build:
+      context: ./classification
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./notebooks:/app/notebooks
+    environment:
+      - JUPYTER_TOKEN=mobamba
