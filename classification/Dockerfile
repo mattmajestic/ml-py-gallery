@@ -1,25 +1,17 @@
-# Use a base Ubuntu image
-FROM ubuntu:20.04
+# Use an official Python runtime as a parent image
+FROM python:3.10-slim
 
-# Set the working directory in the container
+# Set the working directory to /app
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && \
-    apt-get install -y \
-    python3 \
-    python3-pip \
-    wget && \
-    apt-get clean
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# Copy the requirements.txt file into the container
-COPY requirements.txt /app
+# Install any needed packages specified in requirements.txt
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
-# Install Python dependencies from requirements.txt
-RUN pip3 install --no-cache-dir -r requirements.txt
+# Make port 8501 available to the world outside this container
+EXPOSE 8501
 
-# Expose Jupyter Notebook port
-EXPOSE 8888
-
-# Start Jupyter Notebook when the container runs
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+# Run the Streamlit app when the container launches
+CMD ["streamlit", "run", "app.py"]

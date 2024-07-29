@@ -1,11 +1,8 @@
+
 services:
-  pokemon-classification:
+  app:
     build:
-      context: ./classification
+      context: ./classification  # Use the current directory as the build context
       dockerfile: Dockerfile
     ports:
-      - "8888:8888"
-    volumes:
-      - ./notebooks:/app/notebooks
-    environment:
-      - JUPYTER_TOKEN=mobamba
+      - "8501:8501"  # Expose Streamlit's default port
