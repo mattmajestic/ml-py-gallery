@@ -2,6 +2,13 @@
 
 Building a classification model to value my Pokemon card collection.  
 
+## App/Frontend UI
+
+[Visit App](https://pokemon-card-value-calculator.onrender.com/)
+
+This is a Streamlit application running on `render.com` & `DockerHub`.
+
+[![Docker Image](https://img.shields.io/docker/v/mattmajestic/pokemon-card-value-calculator?color=blue&label=mattmajestic/pokemon-card-value-calculator&logo=docker&logoColor=white&style=for-the-badge)](https://hub.docker.com/r/mattmajestic/pokemon-card-value-calculator)
 
 ## Data
 
@@ -17,18 +24,3 @@ Data being loaded from `img/ dir` as PDF inputs of 9 Pokemon cards per sheet/fil
 
 Create an API Key at https://pokemontcg.io/ and add `POKEMONTCG_IO_API_KEY=API_KEY_YOU_GET`
 
-```
-# Load .env file for Pokémon TCG API
-from dotenv import load_dotenv
-from pokemontcgsdk import Card
-from pokemontcgsdk import Set
-from pokemontcgsdk import Type
-from pokemontcgsdk import Supertype
-from pokemontcgsdk import Subtype
-from pokemontcgsdk import Rarity
-
-load_dotenv()
-
-cards = Card.all()
-cards
-```
