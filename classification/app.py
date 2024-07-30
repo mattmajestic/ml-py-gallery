@@ -119,7 +119,7 @@ def main():
         st.dataframe(card_values)
     
     
-    # jupyterlite(500, 600)    
+    jupyterlite(500, 600)    
     example_github()
 
 if __name__ == "__main__":
