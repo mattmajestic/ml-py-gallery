@@ -9,3 +9,5 @@ pillow
 opencv-python
 streamlit
 streamlit-extras
+pytesseract
+pillow

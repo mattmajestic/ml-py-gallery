@@ -6,6 +6,10 @@ import streamlit.components.v1 as components
 from streamlit_extras.badges import badge
 from streamlit_extras.grid import grid
 from streamlit_extras.jupyterlite import jupyterlite
+import base64
+from io import BytesIO
+# import process_images
+# import classify_images
 
 def example_github():
     badge(type="github", name="mattmajestic/ml-py-gallery")
@@ -52,9 +56,6 @@ def image_carousel(image_files):
     </style>
     """
 
-# Function to convert image to base64
-import base64
-from io import BytesIO
 
 def img_to_base64(img):
     buffered = BytesIO()
